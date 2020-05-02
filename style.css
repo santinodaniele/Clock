@@ -1,0 +1,53 @@
+body {
+    background: darkgray;
+    margin: auto;
+    width: 960px;
+}
+
+.field-track,
+.field-arm {
+    fill: none;
+    stroke: goldenrod;
+    stroke-width: 2px;
+}
+
+.field-tick {
+    transition: opacity 750ms linear;
+}
+
+.field-tick:not(.field-tick--active) circle,
+.field-tick:not(.field-tick--active):first-of-type text {
+    fill: darkgreen !important;
+}
+
+.field-tick:not(.field-tick--active):first-of-type circle {
+    fill: white !important;
+}
+
+.field-tick--disabled {
+    opacity: 0;
+}
+
+.field-tick circle,
+.field-tick text {
+    transition: fill 250ms linear;
+    transition-delay: 400ms;
+}
+
+.field-tick text {
+    font: 700 14px "Helvetica Neue";
+    text-anchor: middle;
+}
+
+#credit {
+    position: static;
+    font: 20px sans-serif;
+    left: 2000px;
+    right: 2000px;
+    bottom: 50px;
+    color: darkred;
+}
+
+#credit a {
+    color: darkred;
+}
